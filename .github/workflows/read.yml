@@ -1,0 +1,17 @@
+name: Read Trigger File
+
+on:
+  workflow_dispatch:
+
+jobs:
+  read:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Read avis.txt
+        run: |
+          echo "=== Contents of trigger_data.txt ==="
+          type avis.txt
+          echo "=== End of file ==="
