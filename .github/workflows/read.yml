@@ -12,6 +12,12 @@ jobs:
 
       - name: Read avis.txt
         run: |
-          echo "=== Contents of trigger_data.txt ==="
+          echo "=== Contents of avis.txt ==="
           type avis.txt
           echo "=== End of file ==="
+
+      - name: Upload avis.txt as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: avis-file
+          path: avis.txt
