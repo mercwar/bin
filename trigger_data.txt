@@ -1,0 +1,8 @@
+Payload:
+Hello
+from
+trigger
+User:
+Anonymous
+Mode:
+test
