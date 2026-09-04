@@ -37,4 +37,10 @@ jobs:
         with:
           name: trigger-data
           path: trigger_data.txt
-
+      - name: Commit trigger data
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add trigger_data.txt
+          git commit -m "Add trigger data from workflow dispatch"
+          git push origin ${{ github.ref }}
