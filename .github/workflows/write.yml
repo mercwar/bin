@@ -28,9 +28,9 @@ jobs:
 
       - name: Write trigger inputs to file
         run: |
-          echo Payload: ${{ github.event.inputs.payload }} > trigger_data.txt
-          echo User: ${{ github.event.inputs.user }} >> trigger_data.txt
-          echo Mode: ${{ github.event.inputs.mode }} >> trigger_data.txt
+          echo Payload: ${{ github.event.inputs.payload }} > avis.txt
+          echo User: ${{ github.event.inputs.user }} >> avis.txt
+          echo Mode: ${{ github.event.inputs.mode }} >> avis.txt
 
       - name: Verify file exists
         run: dir avis.txt
