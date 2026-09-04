@@ -1,8 +1,0 @@
-Payload:
-YAAA
-from
-trigger
-User:
-Anonymous
-Mode:
-test
