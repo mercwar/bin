@@ -1,4 +1,4 @@
-name: Test Workflow
+name: Avis Workflow
 
 permissions:
   contents: write   # <-- grant push rights
@@ -33,19 +33,19 @@ jobs:
           echo Mode: ${{ github.event.inputs.mode }} >> trigger_data.txt
 
       - name: Verify file exists
-        run: dir trigger_data.txt
+        run: dir avis.txt
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: trigger-data
-          path: trigger_data.txt
+          name: avis-data
+          path: avis.txt
 
       - name: Commit trigger data
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add trigger_data.txt
+          git add avis.txt
           git commit -m "Add trigger data from workflow dispatch"
           git push origin HEAD:main
         env:
