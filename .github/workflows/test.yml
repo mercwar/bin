@@ -1,21 +1,39 @@
-name: Workflow Test
+name: Test Workflow
 
 on:
-  push:
-    branches: [ main ]
   workflow_dispatch:
+    inputs:
+      payload:
+        description: 'Data to write from trigger'
+        required: true
+        default: 'Default message'
+      user:
+        description: 'User name'
+        required: false
+        default: 'Anonymous'
+      mode:
+        description: 'Mode of execution'
+        required: false
+        default: 'test'
 
 jobs:
-  test-job:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: windows-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Run a test script
-        run: echo "Hello from GitHub Actions!"
-
-      - name: Show environment
+      - name: Write trigger inputs to file
         run: |
-          echo "Branch: $GITHUB_REF"
-          echo "Actor: $GITHUB_ACTOR"
+          echo "Payload: ${{ github.event.inputs.payload }}" > trigger_data.txt
+          echo "User: ${{ github.event.inputs.user }}" >> trigger_data.txt
+          echo "Mode: ${{ github.event.inputs.mode }}" >> trigger_data.txt
+
+      - name: Show file contents
+        run: type trigger_data.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: trigger-data
+          path: trigger_data.txt
