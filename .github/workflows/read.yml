@@ -7,11 +7,7 @@ jobs:
   read:
     runs-on: windows-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Read avis.txt
-        run: |
-          echo "=== Contents of avis.txt ==="
-          type avis.txt
-          echo "=== End of file ==="
+      - name: Output avis.txt
+        run: type avis.txt
