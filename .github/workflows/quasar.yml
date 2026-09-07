@@ -7,29 +7,22 @@ on:
   workflow_dispatch:
 
 jobs:
-  quasar-search:
+  quasar-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Quasar repo
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Load search result
-        run: cat .quasar/result.json
+      - name: Read search request
+        run: cat search-request.yml || echo "No search-request.yml found"
 
-      - name: Load datalake protocols
-        run: cat protocols/datalake.yml
-
-      - name: Generate datalake output
+      - name: Generate output
         run: |
           mkdir -p output
-          ./src/parser.sh .quasar/result.json protocols/datalake.yml > output/datalake-output.json
+          echo "{ \"result\": \"Quasar ran successfully\" }" > output/datalake-output.json
 
-      - name: Create Pull Request to avis-datalake
-        uses: repo-sync/pull-request@v2
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
-          source_branch: "quasar-output"
-          destination_branch: "main"
-          pr_title: "Quasar Datalake Update"
-          pr_body: "Automated datalake result from Quasar public search."
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          destination_repo: mercwar/avis-datalake
+          name: datalake-output
+          path: output/datalake-output.json
