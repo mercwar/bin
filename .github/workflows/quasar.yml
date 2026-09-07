@@ -1,0 +1,35 @@
+# AIFVS-ARTIFACT
+# FILE: .github/workflows/quasar.yml
+
+name: Quasar Public Search
+
+on:
+  workflow_dispatch:
+
+jobs:
+  quasar-search:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Quasar repo
+        uses: actions/checkout@v4
+
+      - name: Load search result
+        run: cat .quasar/result.json
+
+      - name: Load datalake protocols
+        run: cat protocols/datalake.yml
+
+      - name: Generate datalake output
+        run: |
+          mkdir -p output
+          ./src/parser.sh .quasar/result.json protocols/datalake.yml > output/datalake-output.json
+
+      - name: Create Pull Request to avis-datalake
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: "quasar-output"
+          destination_branch: "main"
+          pr_title: "Quasar Datalake Update"
+          pr_body: "Automated datalake result from Quasar public search."
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          destination_repo: mercwar/avis-datalake
