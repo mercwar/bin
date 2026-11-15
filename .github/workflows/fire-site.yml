@@ -1,33 +1,3 @@
-Skip to content
-mercwar
-Dark-Com-2
-Repository navigation
-Code
-Issues
-Pull requests
-Agents
-Actions
-Projects
-Wiki
-Security and quality
-Insights
-Settings
-Dark-Com-2/.github/workflows
-/fire-site.yml
-Go to file
-t
-T
-mercwar
-mercwar
-Create fire-site.yml
-074b7a2
- · 
-last week
-
-Code
-
-Blame
-56 lines (44 loc) · 1.48 KB
 # /* AVIS_COORD: AVIS://GITHUB/WORKFLOW/XML_GEN/1.0 */
 # /* ROLE: Automated XML Sentinel Dispatch */
 
