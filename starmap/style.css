@@ -1,0 +1,319 @@
+:root {
+  --bg-void: #04060a;
+  --bg-panel: rgba(8, 13, 22, 0.92);
+  --bg-hover: rgba(0, 240, 255, 0.08);
+  --border-dim: #162638;
+  --border-bright: #00f0ff;
+  --cyan: #00f0ff;
+  --teal: #1d5b79;
+  --amber: #ffb800;
+  --text-main: #d6e6f2;
+  --text-dim: #6c879e;
+  --font-mono: 'Consolas', 'Courier New', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-void);
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+/* 3D Star Map Canvas */
+#map-container {
+  flex: 1;
+  position: relative;
+  height: 100%;
+  cursor: grab;
+}
+
+#map-container:active {
+  cursor: grabbing;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Top Left HUD Overlay */
+#hud-top {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hud-title {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--cyan);
+  text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
+}
+
+.hud-sub {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+/* Map Controls */
+#hud-controls {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 6px 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+button:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+button.primary {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+button.primary:hover {
+  background: rgba(255, 184, 0, 0.12);
+}
+
+/* Right Sidebar: EVE Autopilot + GitHub File Browser */
+#sidebar {
+  width: 420px;
+  max-width: 45vw;
+  height: 100%;
+  background: var(--bg-panel);
+  border-left: 1px solid var(--border-dim);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.panel-section {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-dim);
+}
+
+.browser-header {
+  padding-bottom: 8px;
+}
+
+.browser-header .section-header {
+  margin-bottom: 0;
+}
+
+.section-header {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* EVE Autopilot Route Tracker */
+#route-waypoints {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.waypoint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  padding: 4px 8px;
+  border: 1px solid var(--border-dim);
+  background: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  color: var(--text-main);
+}
+
+.waypoint:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.waypoint.active {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.25);
+}
+
+.waypoint-box {
+  width: 8px;
+  height: 8px;
+  background: var(--cyan);
+  display: inline-block;
+}
+
+.waypoint-sep {
+  color: var(--text-dim);
+  font-size: 11px;
+}
+
+/* GitHub-Style File & Directory List */
+#browser-container {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.file-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 16px;
+  border-bottom: 1px solid rgba(22, 38, 56, 0.6);
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.file-row:hover {
+  background: var(--bg-hover);
+}
+
+.file-row.empty-msg {
+  color: var(--text-dim);
+  cursor: default;
+}
+
+.file-row.empty-msg:hover {
+  background: transparent;
+}
+
+.file-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.icon-dir {
+  color: var(--cyan);
+  font-weight: bold;
+}
+
+.icon-file {
+  color: var(--text-dim);
+}
+
+.icon-fork {
+  color: var(--amber);
+  font-weight: bold;
+}
+
+.file-meta {
+  font-size: 10px;
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+
+/* Status Bar */
+#status-bar {
+  padding: 8px 16px;
+  font-size: 11px;
+  color: var(--text-dim);
+  border-top: 1px solid var(--border-dim);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Add Fork Modal */
+#fork-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+
+#fork-modal.open {
+  display: flex;
+}
+
+.modal-box {
+  background: #080d16;
+  border: 1px solid var(--cyan);
+  width: 460px;
+  max-width: 92vw;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-box h3 {
+  font-size: 13px;
+  color: var(--amber);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.modal-box p {
+  font-size: 11px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+.modal-box input,
+.modal-box textarea {
+  width: 100%;
+  background: #04060a;
+  border: 1px solid var(--border-dim);
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 8px;
+}
+
+.modal-box input:focus,
+.modal-box textarea:focus {
+  outline: none;
+  border-color: var(--cyan);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
