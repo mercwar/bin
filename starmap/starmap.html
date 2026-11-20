@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVIS-DATALAKE // NEW EDEN DIRECTORY STARMAP</title>
+  <link rel="stylesheet" href="starmap.css" />
+</head>
+<body>
+
+  <!-- 3D Constellation Map -->
+  <div id="map-container">
+    <canvas id="starmap"></canvas>
+    <div id="hud-top">
+      <div class="hud-title">AVIS-DATALAKE // DIRECTORY CONSTELLATION</div>
+      <div class="hud-sub" id="hover-readout">DRAG TO ORBIT • SCROLL TO ZOOM • CLICK NODE TO JUMP</div>
+    </div>
+    <div id="hud-controls">
+      <button id="btn-reset" type="button">Reset Camera</button>
+      <button id="btn-root" type="button">Jump to Root</button>
+      <button class="primary" id="btn-open-fork" type="button">+ Register Fork</button>
+    </div>
+  </div>
+
+  <!-- Right Sidebar -->
+  <aside id="sidebar">
+    <!-- EVE Autopilot Path Tracker -->
+    <div class="panel-section">
+      <div class="section-header">
+        <span>AUTOPILOT ROUTE // CURRENT PATH</span>
+        <span id="node-count">0 SYSTEMS</span>
+      </div>
+      <div id="route-waypoints"></div>
+    </div>
+
+    <!-- GitHub-Style Directory & File Explorer -->
+    <div class="panel-section browser-header">
+      <div class="section-header">
+        <span id="current-folder-label">/ (ROOT)</span>
+        <span id="item-count">0 ITEMS</span>
+      </div>
+    </div>
+
+    <div id="browser-container"></div>
+
+    <div id="status-bar">
+      <span id="repo-source">SOURCE: mercwar/AVIS-DATALAKE</span>
+      <span id="sync-status">READY</span>
+    </div>
+  </aside>
+
+  <!-- Add Fork Registration Modal -->
+  <div id="fork-modal">
+    <div class="modal-box">
+      <h3>Register External Fork Node</h3>
+      <p>
+        Add a fork to <code>forks.json</code> in the repository so it appears as a star cluster in AVIS-DATALAKE.
+      </p>
+      <input type="text" id="fork-owner" placeholder="GitHub Username / Org (e.g., mercwar)" />
+      <input type="text" id="fork-repo" placeholder="Repository Name (e.g., AVIS-FORK)" />
+      <input type="text" id="fork-url" placeholder="Full GitHub URL (https://github.com...)" />
+      <textarea id="fork-json-output" rows="5" readonly placeholder="Generated forks.json entry will appear here..."></textarea>
+      <div class="modal-actions">
+        <button id="btn-close-fork" type="button">Close</button>
+        <button class="primary" id="btn-preview-fork" type="button">Preview on Map &amp; Copy JSON</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="starmap.js"></script>
+</body>
+</html>
