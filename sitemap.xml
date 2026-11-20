@@ -79,6 +79,9 @@
     <loc>https://github.com/mercwar/bin/blob/main/cyhy/comments.fl</loc>
   </url>
   <url>
+    <loc>https://github.com/mercwar/bin/blob/main/.gitmodules</loc>
+  </url>
+  <url>
     <loc>https://github.com/mercwar/bin/blob/main/RobotValidator.java</loc>
   </url>
   <url>
@@ -86,9 +89,6 @@
   </url>
   <url>
     <loc>https://github.com/mercwar/bin/blob/main/fire-site.sh</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/AVIS-DATALAKE.md</loc>
   </url>
   <url>
     <loc>https://github.com/mercwar/bin/blob/main/starmap/starmap-data.js</loc>
