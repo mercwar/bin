@@ -1,31 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/mercwar/bin/blob/main/robot_directives.fl</loc>
+    <loc>https://github.com/mercwar/bin/blob/main/deepai/tokens/test.avis</loc>
   </url>
   <url>
-    <loc>https://github.com/mercwar/bin/blob/main/tools/bridge.php</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/tools/AIBridge.java</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/tools/bridge.js</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/tools/universal_hook.fl</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/tools/manifest.json</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/tools/bridge.c</loc>
+    <loc>https://github.com/mercwar/bin/blob/main/avis.txt</loc>
   </url>
   <url>
     <loc>https://github.com/mercwar/bin/blob/main/universal_hook.fl</loc>
   </url>
   <url>
-    <loc>https://github.com/mercwar/bin/blob/main/cyhy/comments.fl</loc>
+    <loc>https://github.com/mercwar/bin/blob/main/README.md</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/robot_directives.fl</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/environment_state.fl</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/universal_hook.fl</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/README.md</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/robot_directives.fl</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/environment_state.fl</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/manifest.json</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/cyhy/EditorIntegration.java</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/cyhy/syntax_parser.php</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/cyhy/comments.fl</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/RobotValidator.java</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/tools/AIBridge.java</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/tools/bridge.php</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/tools/universal_hook.fl</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/tools/bridge.c</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/tools/manifest.json</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/tools/bridge.js</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/manifest.json</loc>
   </url>
   <url>
     <loc>https://github.com/mercwar/bin/blob/main/cyhy/EditorIntegration.java</loc>
@@ -34,34 +73,28 @@
     <loc>https://github.com/mercwar/bin/blob/main/cyhy/syntax_parser.php</loc>
   </url>
   <url>
+    <loc>https://github.com/mercwar/bin/blob/main/cyhy/comments.fl</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/.gitmodules</loc>
+  </url>
+  <url>
     <loc>https://github.com/mercwar/bin/blob/main/RobotValidator.java</loc>
   </url>
   <url>
     <loc>https://github.com/mercwar/bin/blob/main/sitemap.xml</loc>
   </url>
   <url>
-    <loc>https://github.com/mercwar/bin/blob/main/.gitmodules</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/environment_state.fl</loc>
+    <loc>https://github.com/mercwar/bin/blob/main/fire-site.sh</loc>
   </url>
   <url>
     <loc>https://github.com/mercwar/bin/blob/main/starmap/style.css</loc>
   </url>
   <url>
+    <loc>https://github.com/mercwar/bin/blob/main/starmap/starmap-data.js</loc>
+  </url>
+  <url>
     <loc>https://github.com/mercwar/bin/blob/main/starmap/starmap.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/README.md</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/fire-site.sh</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/avis.txt</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/.github/workflows/quasar.yml</loc>
   </url>
   <url>
     <loc>https://github.com/mercwar/bin/blob/main/.github/workflows/read.yml</loc>
@@ -73,54 +106,24 @@
     <loc>https://github.com/mercwar/bin/blob/main/.github/workflows/write.yml</loc>
   </url>
   <url>
-    <loc>https://github.com/mercwar/bin/blob/main/manifest.json</loc>
+    <loc>https://github.com/mercwar/bin/blob/main/.github/workflows/quasar.yml</loc>
   </url>
   <url>
-    <loc>https://github.com/mercwar/bin/blob/main/deepai/tokens/test.avis</loc>
+    <loc>https://github.com/mercwar/bin/blob/main/tools/AIBridge.java</loc>
   </url>
   <url>
-    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/robot_directives.fl</loc>
+    <loc>https://github.com/mercwar/bin/blob/main/tools/bridge.php</loc>
   </url>
   <url>
-    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/tools/bridge.php</loc>
+    <loc>https://github.com/mercwar/bin/blob/main/tools/universal_hook.fl</loc>
   </url>
   <url>
-    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/tools/AIBridge.java</loc>
+    <loc>https://github.com/mercwar/bin/blob/main/tools/bridge.c</loc>
   </url>
   <url>
-    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/tools/bridge.js</loc>
+    <loc>https://github.com/mercwar/bin/blob/main/tools/manifest.json</loc>
   </url>
   <url>
-    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/tools/universal_hook.fl</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/tools/manifest.json</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/tools/bridge.c</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/universal_hook.fl</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/cyhy/comments.fl</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/cyhy/EditorIntegration.java</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/cyhy/syntax_parser.php</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/RobotValidator.java</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/environment_state.fl</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/README.md</loc>
-  </url>
-  <url>
-    <loc>https://github.com/mercwar/bin/blob/main/logic/universal/v1/manifest.json</loc>
+    <loc>https://github.com/mercwar/bin/blob/main/tools/bridge.js</loc>
   </url>
 </urlset>
