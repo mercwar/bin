@@ -7,6 +7,9 @@
     <loc>https://github.com/mercwar/bin/blob/main/avis.txt</loc>
   </url>
   <url>
+    <loc>https://github.com/mercwar/bin/blob/main/_config.yml</loc>
+  </url>
+  <url>
     <loc>https://github.com/mercwar/bin/blob/main/universal_hook.fl</loc>
   </url>
   <url>
@@ -74,6 +77,9 @@
   </url>
   <url>
     <loc>https://github.com/mercwar/bin/blob/main/cyhy/comments.fl</loc>
+  </url>
+  <url>
+    <loc>https://github.com/mercwar/bin/blob/main/.gitmodules</loc>
   </url>
   <url>
     <loc>https://github.com/mercwar/bin/blob/main/RobotValidator.java</loc>
